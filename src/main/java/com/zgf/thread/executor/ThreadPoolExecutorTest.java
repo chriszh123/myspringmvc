@@ -10,8 +10,8 @@ public class ThreadPoolExecutorTest {
 
     public void testExecutorService() {
         ThreadFactory threadFactory = new DefaultThreadFactory();
-        LinkedBlockingQueue linkedBlockingQueue = new LinkedBlockingQueue<Runnable>(1024);
-        ExecutorService pool = new ThreadPoolExecutor(5, 200,
+        LinkedBlockingQueue linkedBlockingQueue = new LinkedBlockingQueue<Runnable>(200);
+        ExecutorService pool = new ThreadPoolExecutor(5, 20,
                 0, TimeUnit.MILLISECONDS, linkedBlockingQueue, threadFactory, new ThreadPoolExecutor.AbortPolicy());
 
         Runnable command = new Runnable() {
