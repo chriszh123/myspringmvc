@@ -2,6 +2,7 @@ package com.zgf.thread.executor;
 
 import java.util.concurrent.*;
 
+
 public class ThreadPoolExecutorTest {
     public static void main(String[] args) {
         new ThreadPoolExecutorTest().testExecutorService();
@@ -19,6 +20,19 @@ public class ThreadPoolExecutorTest {
                 System.out.println("currentThread name : " + Thread.currentThread().getName());
             }
         };
-        pool.execute(command);
+        try {
+            long start = System.currentTimeMillis();
+            for (int i = 0; i <= 10; i++) {
+                pool.execute(command);
+            }
+            pool.shutdown();
+            while (!pool.awaitTermination(1, TimeUnit.MILLISECONDS)) {
+                System.out.println("线程还在执行。。。");
+            }
+            long end = System.currentTimeMillis();
+            System.out.println(String.format("一共处理了%s", (end - start)));
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
     }
 }
