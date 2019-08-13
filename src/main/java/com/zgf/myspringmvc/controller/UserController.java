@@ -6,10 +6,6 @@
  */
 package com.zgf.myspringmvc.controller;
 
-import com.zgf.mybatis.handlerwrite.MyDefaultSqlSession;
-import com.zgf.mybatis.handlerwrite.MySqlSession;
-import com.zgf.mybatis.handlerwrite.SigninSchoolTask;
-import com.zgf.mybatis.handlerwrite.StudentMapper;
 import com.zgf.myspringmvc.annotation.Controller;
 import com.zgf.myspringmvc.annotation.Qualifier;
 import com.zgf.myspringmvc.annotation.RequestMapping;

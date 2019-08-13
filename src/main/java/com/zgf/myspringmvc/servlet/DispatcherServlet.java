@@ -28,7 +28,7 @@ import java.util.Map;
 
 /**
  * 其实，以前我们定义一个Servlet，需要在web.xml中去配置，不过在Servlet3.0后出现了基于注解的Servlet。
- * 仔细观察，你会发现，这个DispatcherServlet是自启动，而且传入了一个参数。
+ * 这个DispatcherServlet是自启动，而且传入了一个参数。
  * 要知道，在Spring MVC中，要想基于注解，需要在配置中指明扫描的包路径
  *
  * @author zhangguifeng
@@ -52,7 +52,7 @@ public class DispatcherServlet extends HttpServlet {
     private Map<Method, String> methodPackageMap = new HashMap<>();
 
     /**
-     * 在init中，我们主要是完成了什么呢？
+     * 在init中
      * 第一，我们应该去扫描基包下的类，得到信息A
      * 第二，对于@Controller/@Service/@Repository注解而言，我们需要拿到对应的名称，并初始化它们修饰的类，形成映射关系B
      * 第三，我们还得扫描类中的字段，如果发现有@Qualifier的话，我们需要完成注入
