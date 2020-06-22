@@ -40,6 +40,14 @@
           <element id="library" level="project" name="Maven: org.springframework:spring-web:4.1.7.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-webmvc:4.1.7.RELEASE" />
           <element id="library" level="project" name="Maven: io.springfox:springfox-swagger-ui:2.2.2" />
+          <element id="library" level="project" name="Maven: org.apache.zookeeper:zookeeper:3.3.3" />
+          <element id="library" level="project" name="Maven: log4j:log4j:1.2.15" />
+          <element id="library" level="project" name="Maven: javax.mail:mail:1.4" />
+          <element id="library" level="project" name="Maven: javax.activation:activation:1.1" />
+          <element id="library" level="project" name="Maven: javax.jms:jms:1.1" />
+          <element id="library" level="project" name="Maven: com.sun.jdmk:jmxtools:1.2.1" />
+          <element id="library" level="project" name="Maven: com.sun.jmx:jmxri:1.2.1" />
+          <element id="library" level="project" name="Maven: jline:jline:0.9.94" />
         </element>
       </element>
       <element id="directory" name="META-INF">
