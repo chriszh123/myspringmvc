@@ -23,7 +23,10 @@ public class Consumer {
         properties.put("auto.commit.interval.ms", "1000");
 
         properties.put("auto.offset.reset", "latest");
+        // 指定了消费者在被认为死亡之前可以与服务器断开连接的时间
+        // 如果消费者没有在session.timeout.ms 指定的时间内发送心跳给群组协调器,就被认为已经死亡,协调器就会触发再均衡
         properties.put("session.timeout.ms", "30000");
+        // 指定了 poll() 方法向协调器发送心跳的频率，
         properties.put("heartbeat.interval.ms", "10000");
         properties.put("max.poll.interval.ms", "100000");
         // 指定序列化类
